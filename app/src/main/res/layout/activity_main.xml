@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fib_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.brookswebpro.fibonaccinumbers.MainActivity">
+
+    <EditText
+        android:id="@+id/numberEntered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fibTesterButton"
+        android:layout_alignEnd="@+id/fibTesterButton"
+        android:layout_alignLeft="@+id/fibTesterButton"
+        android:layout_alignRight="@+id/fibTesterButton"
+        android:layout_alignStart="@+id/fibTesterButton"
+        android:layout_marginBottom="15dp"
+        android:background="#FDFEFE"
+        android:ems="10"
+        android:hint="Enter number"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/fibTesterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_above="@+id/chalkboard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="fibTester"
+        android:text="Is It a Fibonacci #?" />
+
+    <ImageView
+        android:id="@+id/chalkboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/fib_chalkboard" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="70dp"
+        android:onClick="goToSequenceGenerator"
+        android:text="Go to Sequence Generator"
+        android:textSize="18sp" />
+
+</android.widget.RelativeLayout>
