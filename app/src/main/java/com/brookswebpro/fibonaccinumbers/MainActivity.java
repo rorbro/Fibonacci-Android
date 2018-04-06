@@ -17,8 +17,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.brookswebpro.fibonaccinumbers.FibSequence;
-
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,10 +31,8 @@ public class MainActivity extends AppCompatActivity {
         mgr.hideSoftInputFromWindow(usersNumber.getWindowToken(), 0);
         if (TextUtils.isEmpty(usersNumber.getText().toString())) {
             resultTextView.setText("Please enter a number");
-
         } else {
             int number;
-
             String result;
             int newNumber = 0;
             int number1 = 1;
@@ -46,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 number = Integer.parseInt(usersNumber.getText().toString());
                 if (number > 2000000000) {
-                    resultTextView.setText("Please enter a smaller number");
+                    resultTextView.setText("Please enter a number between 0 and 2,000,000,000");
                     usersNumber.setText("");
                 } else {
                     if (number == 0) {
@@ -73,10 +69,9 @@ public class MainActivity extends AppCompatActivity {
                     usersNumber.setText("");
                 }
             } catch (Exception e) {
-                resultTextView.setText("Please enter a smaller number");
+                resultTextView.setText("Please enter a number between 0 and 2,000,000,000");
                 usersNumber.setText("");
-        }
-
+            }
         }
     }
 

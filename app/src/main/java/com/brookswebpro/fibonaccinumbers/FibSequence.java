@@ -17,8 +17,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.brookswebpro.fibonaccinumbers.MainActivity;
-
 import java.text.DecimalFormat;
 
 public class FibSequence extends AppCompatActivity {
@@ -52,7 +50,7 @@ public class FibSequence extends AppCompatActivity {
                 } else if (number == 1) {
                     message = "The first Fibonacci number is 1.";
                 } else {
-                    message = "The first " + number + " Fibonacci numbers are (1) 1;\n (2) 1";
+                    message = "The first " + number + " Fibonacci numbers are:\n(1) 1;\n(2) 1";
                     DecimalFormat formatter = new DecimalFormat("#,###,###");
                     while (i <= number) {
                         newNumber = number1 + number2;
@@ -60,7 +58,6 @@ public class FibSequence extends AppCompatActivity {
                         number2 = newNumber;
                         message += ";\n(" + i + ") " + formatter.format(newNumber);
                         i++;
-
                     }
                 }
                 resultTextView.setText(message);
@@ -107,13 +104,9 @@ public class FibSequence extends AppCompatActivity {
             }
         });
 
-
-
         resultTextView = (TextView) findViewById(R.id.resultTextView);
         resultTextView.setMovementMethod(new ScrollingMovementMethod());
         usersNumber2 = (EditText) findViewById(R.id.numberEntered2);
         usersNumber2.setBackgroundColor(Color.WHITE);
-
-
     }
 }
